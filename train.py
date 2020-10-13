@@ -39,7 +39,7 @@ print(test_factors_ar)
 prediction = log.predict(test_factors_ar)
 print(prediction.shape)
 copy = 'PassengerId,Survived\n'
-for _ in range(418):
+for _ in range(10000):
     copy = copy + (str(892+_)+','+str(prediction[_])) + '\n'
 fd = open('submission.csv','a')
 fd.write(copy)
