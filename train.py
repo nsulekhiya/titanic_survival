@@ -31,7 +31,7 @@ log.fit(X_train,y_train)
 y_predict = log.predict(X_test)
 #print(accuracy_score(y_test,y_predict))
 test_dataset = pd.read_csv('test.csv') 
-test_dataset = test_dataset[['Pclass','Sex','Age','SibSp','Fare','SibSp']]
+test_dataset = test_dataset[['Pclass','Sex','Age','SibSp','Fare','SibSp','Cost']]
 test_dataset.fillna(30,inplace = True)
 test_dataset.replace(['male','female'],[-1,1],inplace = True)
 test_factors_ar = np.array(test_dataset,dtype = float)
